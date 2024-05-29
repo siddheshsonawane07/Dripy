@@ -1,17 +1,12 @@
 import firebase from "firebase";
 
 export const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID + ".firebaseapp.com",
-  databaseURL:
-    "https://" +
-    process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID +
-    ".firebaseio.com",
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID + ".appspot.com",
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+  apiKey: "AIzaSyB2lRwbInMSBFVdnpTMyO3UnopZJgRx77I",
+  authDomain: "ecommerce-e6531.firebaseapp.com",
+  projectId: "ecommerce-e6531",
+  storageBucket: "ecommerce-e6531.appspot.com",
+  messagingSenderId: "724471387691",
+  appId: "1:724471387691:web:129f26bbf031716443bc6e",
 };
 
 try {
@@ -25,7 +20,7 @@ try {
 const app = firebase.app();
 const auth = firebase.auth();
 const db = firebase.firestore();
-const storage = firebase.storage()
+const storage = firebase.storage();
 
 export { firebase, auth, db, storage };
 console.log(app.name ? "Firebase Mode Activated!" : "Firebase not working :(");
